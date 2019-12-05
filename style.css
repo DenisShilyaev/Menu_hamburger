@@ -1,6 +1,8 @@
 :root {
 	--touch: 100px;
 	--touch-item: 10px;
+	--touch-color: rgb(117, 0, 255);
+	--translate: calc(var(--touch) / 2 - var(--touch-item) / 2);
 }
 
 body {
@@ -13,13 +15,29 @@ body {
 .touch {
 	width: var(--touch);
 	height: var(--touch);
-	border: 1px solid #000;
 	margin: auto;
 	display: flex;
 	flex-wrap: wrap;
+	align-content: space-between;
+	cursor: pointer;
 }
 
-.toch > div {
+.touch > div {
 	width: 100%;
 	height: var(--touch-item);
+	background-color: var(--touch-color);
+	border-radius: 5px;
+	transition: 0.4s;
+}
+
+.active > div:nth-child(1)  {
+	transform: translateY(var(--translate)) rotate(-45deg);
+}
+
+.active > div:nth-child(2)  {
+	opacity: 0;
+}
+
+.active > div:nth-child(3)  {
+	transform: translateY(calc(var(--translate) * -1)) rotate(45deg);
 }
