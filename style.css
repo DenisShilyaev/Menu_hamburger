@@ -7,7 +7,7 @@ body {
 	display: flex;
 	height: 100vh;
 	margin: 0; /* что бы убрать скролл */
-	padding: 0; /* что бы убрать скролл */
+	padding: 0; 
 }
 
 .touch {
