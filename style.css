@@ -1,0 +1,25 @@
+:root {
+	--touch: 100px;
+	--touch-item: 10px;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	margin: 0; /* что бы убрать скролл */
+	padding: 0; /* что бы убрать скролл */
+}
+
+.touch {
+	width: var(--touch);
+	height: var(--touch);
+	border: 1px solid #000;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.toch > div {
+	width: 100%;
+	height: var(--touch-item);
+}
